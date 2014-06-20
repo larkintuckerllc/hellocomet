@@ -1,12 +1,12 @@
 This is a demonstration of a COMET (long polling) application; split into two separate Node.js applciations.
 
-hellocometserver
+_hellocometserver_
 
 This is the server component of a COMET (long polling) "Hello World" application. This server essentially sits of port 3001 and has two endpoints: GET /messages and POST /messages.  GET /messages stays open until a message is pushed out and POST /messages pushes a message out (by simply closing all the open GET /message connections).  With Node.js, this is particularly simple due to Javascript's asynchronous behavior.
 
 One key is to deal with the Javascript same-origin policy; solution is to use Cross-Origin Resource Sharing (CORS).
 
-hellocometclient
+_hellocometclient_
 
 This is the client component of a COMET (long polling) "Hello World" application. This client essentially opens up an AJAX connection to the server application on port 3001 and waits for a messages to be pushed. Like the server programming, this is pretty easy due to Javascript's asynchronous behavior.
 
